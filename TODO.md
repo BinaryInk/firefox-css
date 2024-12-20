@@ -1,13 +1,14 @@
-- Segment changes into separate files
-- Change colors when inactive window to match Hyprland
-- Border on panel
-- Make more elements compact (e.g., settings drop-down, downloads drop-down,
-  extension drop-down, etc.)
-- Fix icons in address bar
-- Fix extension icons
-- Fix download icon
-- Introduce transparency
-- Add panel animation (?)
-- Add left margin to back button
-- Modify native tab appearance
-- Custom CSS for sidebery to match
+- TODO Segment changes into separate files
+- TODO Change colors when inactive window to match Hyprland
+- TODO Border on panel
+- TODO Make more elements compact (e.g., settings drop-down, downloads drop-down, extension drop-down, etc.)
+- FIX icons in address bar
+- FIX extension icons
+- FIX download icon
+- TODO Introduce transparency
+- TODO Add panel animation (?)
+- TODO Add left margin to back button
+- TODO Modify native tab appearance
+- TODO Custom CSS for sidebery to match
+- TODO Wallpaper
+- FIX URL bar contents 'shift' after it's been activated and de-activated
