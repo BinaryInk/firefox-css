@@ -1,0 +1,283 @@
+.titlebar-buttonbox-container { display:none }
+
+/** SIDEBERY ******************************************************************/
+/*
+ SOURCE: https://github.com/mbnuqw/sidebery/wiki/Firefox-Styles-Snippets-(via-userChrome.css)#completely-hide-native-tabs-strip
+*/
+ #main-window #TabsToolbar > .toolbar-items {
+    overflow: hidden;
+    transition: height 0.3s 0.3s !important;
+  }
+  /* Default state: Set initial height to enable animation */
+  #main-window #TabsToolbar > .toolbar-items { height: 3em !important; }
+  #main-window[uidensity="touch"] #TabsToolbar > .toolbar-items { height: 3.35em !important; }
+  #main-window[uidensity="compact"] #TabsToolbar > .toolbar-items { height: 2.7em !important; }
+  /* Hidden state: Hide native tabs strip */
+  #main-window[titlepreface*="XXX"] #TabsToolbar > .toolbar-items { height: 0 !important; }
+  /* Hidden state: Fix z-index of active pinned tabs */
+  #main-window[titlepreface*="XXX"] #tabbrowser-tabs { z-index: 0 !important; }
+  /* Hidden state: Hide window buttons in tabs-toolbar */
+  #main-window[titlepreface*="XXX"] #TabsToolbar .titlebar-spacer,
+  #main-window[titlepreface*="XXX"] #TabsToolbar .titlebar-buttonbox-container {
+    display: none !important;
+  }
+/******************************************************************************/
+
+:root {
+    --toolbox-non-lwt-bgcolor: rgb(0, 0, 0, 0.9) !important;
+    --toolbox-bgcolor: var(--toolbox-non-lwt-bgcolor) !important;
+    --toolbox-non-lwt-bgcolor-inactive: rgb(0, 0, 0, 0.6) !important;
+    --toolbox-bgcolor-inactive: var(--toolbox-non-lwt-bgcolor-inactive) !important;
+    --toolbar-start-end-padding: 0px !important;
+
+    --toolbarbutton-outer-padding: 4px !important;
+    --toolbarbutton-inner-padding: 4px !important;
+    --toolbarbutton-icon-fill: #9cdcfe !important;
+    --toolbarbutton-hover-background: #9cdcfe30 !important;
+    --toolbarbutton-border-radius: 4px !important;
+
+    --toolbar-field-focus-color: #ce9178 !important;
+    --toolbar-field-focus-border-color: #ce9178 !important; 
+
+    --titlebar-bgcolor: light-dark(rgba(0, 0, 0, 0.9), rgba(255, 255, 255, 0.8)) !important;
+    --titlebar-bgcolor-inactive: light-dark(rgba(0, 0, 0, 0.75), rgba(255, 255, 255, 0.6)) !important;
+
+    --urlbar-container-height: 20px !important;
+    --urlbar-min-height: 20px !important;
+    --urlbar-padding-block: 0px !important;
+    --urlbar-margin-block: 0px !important;
+    --urlbar-icon-padding: 4px !important;
+    --urlbar-icon-radius: 4px !important;
+    --urlbar-container-padding: 0px !important;
+    --urlbar-margin-inline: 0px !important;
+    --urlbar-box-bgcolor: transparent !important;
+    --urlbar-box-focus-bgcolor: transparent !important;
+    --urlbar-box-hover-bgcolor: transparent !important;
+    
+    
+    --urlbarView-favicon-margin-start: 4px !important;
+    --urlbarView-favicon-margin-end: 12px !important;
+    --urlbarView-hover-background: #dcdcaa50 !important;
+    --urlbarView-separator-color: transparent !important;
+    --urlbarView-item-inline-padding: 4px !important;
+    --urlbarView-item-block-padding: 4px !important;
+    
+
+    --tab-selected-shadow: 0px !important;
+    --tab-selected-bgcolor: #9cdcfe50 !important;
+    --tab-min-height: 16px !important;
+    --tab-group-label-height: 16px !important;
+    --tab-inner-inline-margin: 4px !important;
+    --tab-inline-padding: 4px !important;
+    --tab-pinned-expanded-background-width: 40px !important;
+    --tab-border-radius: 10px !important;
+    --tab-shadow-max-size: 0px !important;
+    --tab-block-margin: 0px !important;
+    --tab-icon-end-margin: 4px !important;
+    --tab-label-line-height: 1.2 !important;
+    --tab-hover-background-color: #dcdcaa50 !important;
+    --tab-outline: 2px solid var(--tab-outline-color) !important;
+    --tabstrip-inner-border: none !important;
+
+    --tabstrip-min-height: 16px !important;
+
+    --button-boder-radius: 10px !important;
+
+    --size-item-small: 10px !important;
+    --size-item-medium: 14px !important;
+    --size-item-large: 18px !important;
+}
+
+body {
+    font-size: 11.5px;
+}
+
+.browser-toolbar {
+    background-color: var(--titlebar-bgcolor);
+    color: var(--toolbar-color);
+    border-style: none;
+}
+
+.urlbar-input #urlbar .urlbar-input-container {
+    color: #ce9178;
+}
+
+#urlbar-container {
+    color: #ce9178;
+}
+.urlbar-icon {
+    height: 12px;
+    width: 12px;
+}
+
+.sidebar-splitter {
+	appearance: none;
+	width: 2px;
+	background-color: -moz-dialog;
+	/* border: 1px ThreeDShadow; */
+	border-style: none;
+}
+
+.sidebar-splitter {
+	appearance: none;
+	width: 6px;
+    background-color: transparent;
+    border-color: #9cdcfe;
+	border-style: none;
+}
+
+#nav-bar:not(:-moz-lwtheme) {
+    background: unset !important;
+    border: unset !important;
+    box-shadow: unset !important;
+}
+
+toolbarbutton#PanelUI-menu-button .toolbarbutton-badge-stack {
+/*     background-color: #9cdcfe !important; */
+/*     border-top-right-radius: 0px !important; */
+/*     border-bottom-right-radius: 0px !important; */
+/*     border-top-left-radius: 10px; */
+/*     border-top-right-radius: 10px; */
+/*     fill: black !important; */
+    margin-right: 12px
+}
+
+toolbarbutton#PanelUI-menu-button {
+    padding: 10px !important;
+}
+
+toolbarbutton#PanelUI-menu-button .toolbarbutton-badge-stack .toolbarbutton-icon {
+    height: 16px;
+    width: 16px;
+}
+
+/* toolbar background */
+toolbar:not(#TabsToolbar):not(#toolbar-menubar):not(#nav-bar):not(:-moz-lwtheme) {
+    background: unset !important;
+    border: unset !important;
+    box-shadow: unset !important;
+}
+
+/* hide toolbar shadow */
+#nav-bar:not(:-moz-lwtheme),
+toolbar:not(#TabsToolbar):not(#toolbar-menubar):not(#nav-bar):not(:-moz-lwtheme) {
+    appearance: none !important;
+    box-shadow: unset !important;
+}
+
+/* menubar */
+#main-window:not(:-moz-lwtheme) #main-menubar > menu > :is(label,description) {
+    color: var(--general_toolbar_text_color, inherit) !important;
+    text-shadow: 1px 1px 1px var(--general_toolbar_text_shadow, inherit) !important;
+}
+
+toolbar .toolbarbutton-1 {
+    & .toolbarbutton-icon {
+        width: 14px !important;
+        height: 14px !important; 
+    }
+    & > .toolbarbutton-icon, & > .toolbarbutton-text, & > .toolbarbutton-badge-stack,
+    & > .toolbarbutton-badge-stack  > box {
+        padding: 0px !important;
+        border-radius: 4px !important;
+        margin-top: 0px !important;
+    }     
+}
+
+.unified-extensions-item-action-button .toolbarbutton-badge-stack {
+    padding: 0px !important;
+    border-radius: 0px !important;
+    /* width: 20px !important;
+    height: 20px !important; */
+}
+.unified-extensions-item-action-button .toolbarbutton-badge-stack .toolbarbutton-icon,
+#downloads-button box image {
+    width: 14px !important;
+    height: 14px !important;
+}
+
+.webextension-browser-action {
+    & > .toolbarbutton-badge-stack > .toolbarbutton-icon {
+        height: 14px;
+        width: 14px;
+    }
+}
+
+toolbarbutton#back-button,
+toolbarbutton#forward-button {
+    &:not([disabled]) {
+        fill: black !important;
+        background: #9cdcfe !important;
+    }
+    &[disabled] {
+        fill: black !important;
+        background: #9cdcfe !important;
+    }
+}
+.urlbar-input-container {
+    background-color: black;
+    
+}
+#nav-bar {
+    background-color: black !important;
+    border-top: 2px solid #9cdcfe !important;
+}
+#navigator-toolbox {
+    border-bottom: 2px solid #9cdcfe !important;
+    
+}
+toolbarbutton#reload-button {
+    fill: black !important;
+    &[disabled] {
+        fill: black !important;
+        background: #bd81b8 !important;
+    }
+    &:not([displaystop]) {
+        fill: black !important;
+        background: #bd81b8 !important;
+    }
+}
+toolbarbutton#stop-button {
+    fill: black !important;
+    background: #ce9178 !important;
+}
+/* toolbarbutton#stop-button,
+toolbarbutton#reload-button {
+     border-top-right-radius: 10px; 
+     border-top-right-radius: 10px; 
+}  */
+
+/* var(--toolbox-non-lwt-bgcolor-inactive) */
+:root:not([inFullscreen]){
+    --uc-bottom-toolbar-height: calc(26px + var(--toolbarbutton-outer-padding) )
+  }
+
+  :root[uidensity="compact"]:not([inFullscreen]){
+    --uc-bottom-toolbar-height: calc(32px + var(--toolbarbutton-outer-padding) )
+  }
+
+  #browser,
+  #customization-container{ 
+      margin-bottom: var(--uc-bottom-toolbar-height,0px);
+}
+#nav-bar{
+    position: fixed !important;
+    bottom: 0px;
+    /* For some reason -webkit-box behaves internally like -moz-box, but can be used with fixed position. display: flex would work too but it breaks extension menus. */
+    display: -webkit-box;
+    width: 100%;
+    z-index: 1;
+  }
+ #nav-bar-customization-target{ -webkit-box-flex: 1; }
+
+/* Fix panels sizing */
+  .panel-viewstack{ max-height: unset !important; }
+
+  #urlbar[breakout][breakout-extend]{
+    display: flex !important;
+    flex-direction: column-reverse;
+    bottom: 0px !important; /* Change to 3-5 px if using compact_urlbar_megabar.css depending on toolbar density */
+    top: auto !important;
+  }
+
+  .urlbarView-body-inner{ border-top-style: none !important; }
