@@ -12,3 +12,4 @@
 - TODO Custom CSS for sidebery to match
 - TODO Wallpaper
 - FIX URL bar contents 'shift' after it's been activated and de-activated
+- TODO Dynamic theme selection by light/dark
