@@ -88,6 +88,8 @@
   --urlbarView-item-inline-padding: 4px !important;
   --urlbarView-item-block-padding: 4px !important;
   --urlbarView-secondary-text-color: #6a9955 !important;
+  --urlbarView-highlight-background: transparent !important;
+  --urlbarView-highlight-color: #ce9178 !important;
 
 
   --tab-selected-shadow: 0px !important;
@@ -169,6 +171,35 @@ urlbar-input::placeholder, .searchbar-textbox::placeholder {
   width: 12px;
 }
 
+/* #urlbar-go-button, 
+#search-go-button {
+  fill: #9cdcfe;
+} */
+
+#urlbar:is([focused], [open]), #searchbar:focus-within {
+  color: #9cdcfe important!;
+}
+
+.urlbarView-url {
+  color: #6a9955 !important;
+}
+
+.urlbarView {
+  color: #9cdcfe;
+}
+
+.urlbarView-row-inner {
+  &[selected] {
+    border: 2px solid #ce9178 !important;
+    border-radius: 10px;
+  }
+}
+
+#urlbar&[breakout]&[breakout-extend] > #urlbar-background {
+    border-radius: 10px important!;
+  }
+}
+
 .sidebar-splitter {
   appearance: none;
   width: 2px;
@@ -203,8 +234,6 @@ toolbarbutton#PanelUI-menu-button .toolbarbutton-badge-stack .toolbarbutton-icon
   height: 16px;
   width: 16px;
 }
-
-
 
 toolbar .toolbarbutton-1 {
   & .toolbarbutton-icon {
