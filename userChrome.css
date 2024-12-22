@@ -104,6 +104,11 @@ body {
 
 #urlbar-container {
     color: #ce9178;
+    --urlbar-container-height: 32px;
+}
+#urlbar {
+  --urlbar-height: 30x;
+  bottom: 0px;
 }
 .urlbar-icon {
     height: 12px;
@@ -264,6 +269,7 @@ toolbarbutton#reload-button {
     /* For some reason -webkit-box behaves internally like -moz-box, but can be used with fixed position. display: flex would work too but it breaks extension menus. */
     display: -webkit-box;
     width: 100%;
+    height: 32px;
     z-index: 1;
   }
  #nav-bar-customization-target{ -webkit-box-flex: 1; }
