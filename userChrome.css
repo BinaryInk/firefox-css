@@ -1,3 +1,5 @@
+@import './css/transparency.css';
+
 .titlebar-buttonbox-container {
   display: none
 }
@@ -43,13 +45,15 @@
 /******************************************************************************/
 
 :root {
-  --vscode-theme-background: rgba(0, 0, 0, 0.9);
-  --vscode-theme-background-inactive: rgba(0, 0, 0, 0.75);
+  --vscode-theme-background: rgba(0, 0, 0, 0.85) !important;
+  --vscode-theme-background-inactive: rgba(0, 0, 0, 0.6) !important;
 
   --toolbox-non-lwt-bgcolor: var(--vscode-theme-background) !important;
-  --toolbox-bgcolor: var(--toolbox-non-lwt-bgcolor) !important;
   --toolbox-non-lwt-bgcolor-inactive: var(--vscode-theme-background-inactive) !important;
-  --toolbox-bgcolor-inactive: var(--toolbox-non-lwt-bgcolor-inactive) !important;
+  
+  --toolbar-non-lwt-bgcolor: var(--vscode-theme-background) !important;
+  --toolbar-non-lwt-bgcolor-inactive: var(--vscode-theme-background-inactive) !important;
+  
   --toolbar-start-end-padding: 0px !important;
 
   --toolbarbutton-outer-padding: 4px !important;
@@ -114,11 +118,27 @@ body {
   font-size: 11.5px;
 }
 
+#nav-bar,
+#TabsToolbar,
+#toolbar-menubar,
+toolbar {
+  background-color: var(--vscode-theme-background);
+  &:where(:-moz-window-inactive) {
+    background-color: var(--vscode-theme-background-inactive);
+  }
+}
+
 .browser-toolbar {
   background-color: var(--vscode-theme-background) !important;
-  color: var(--toolbar-color);
+  /* color: var(--toolbar-color); */
   border-style: none;
 }
+
+/* #toolbar-menu, #TabsToolbar, #nav-bar, #PersonalToolbar {
+  background-color: rgba(0, 0, 0, 0.9);
+} */
+
+
 
 .urlbar-input #urlbar .urlbar-input-container {
   color: #ce9178;
@@ -130,7 +150,7 @@ body {
 }
 
 #urlbar {
-  --urlbar-height: 30x;
+  --urlbar-height: 30px;
   bottom: 0px;
 }
 
@@ -155,12 +175,6 @@ body {
   border-style: none;
 }
 
-#nav-bar:not(:-moz-lwtheme) {
-  background: unset !important;
-  border: unset !important;
-  box-shadow: unset !important;
-}
-
 toolbarbutton#PanelUI-menu-button .toolbarbutton-badge-stack {
   /*     background-color: #9cdcfe !important; */
   /*     border-top-right-radius: 0px !important; */
@@ -180,25 +194,7 @@ toolbarbutton#PanelUI-menu-button .toolbarbutton-badge-stack .toolbarbutton-icon
   width: 16px;
 }
 
-/* toolbar background */
-toolbar:not(#TabsToolbar):not(#toolbar-menubar):not(#nav-bar):not(:-moz-lwtheme) {
-  background: unset !important;
-  border: unset !important;
-  box-shadow: unset !important;
-}
 
-/* hide toolbar shadow */
-#nav-bar:not(:-moz-lwtheme),
-toolbar:not(#TabsToolbar):not(#toolbar-menubar):not(#nav-bar):not(:-moz-lwtheme) {
-  appearance: none !important;
-  box-shadow: unset !important;
-}
-
-/* menubar */
-#main-window:not(:-moz-lwtheme) #main-menubar>menu> :is(label, description) {
-  color: var(--general_toolbar_text_color, inherit) !important;
-  text-shadow: 1px 1px 1px var(--general_toolbar_text_shadow, inherit) !important;
-}
 
 toolbar .toolbarbutton-1 {
   & .toolbarbutton-icon {
@@ -249,13 +245,7 @@ toolbarbutton#forward-button {
   }
 }
 
-.urlbar-input-container {
-  background-color: black;
-
-}
-
 #nav-bar {
-  background-color: rgba(0, 0, 0, 0.8);
   border-top: 2px solid #9cdcfe !important;
 }
 
@@ -304,7 +294,6 @@ toolbarbutton#reload-button {
 #nav-bar {
   position: fixed !important;
   bottom: 0px;
-  /* For some reason -webkit-box behaves internally like -moz-box, but can be used with fixed position. display: flex would work too but it breaks extension menus. */
   display: -webkit-box;
   width: 100%;
   height: 32px;
@@ -324,7 +313,6 @@ toolbarbutton#reload-button {
   display: flex !important;
   flex-direction: column-reverse;
   bottom: 0px !important;
-  /* Change to 3-5 px if using compact_urlbar_megabar.css depending on toolbar density */
   top: auto !important;
 }
 
