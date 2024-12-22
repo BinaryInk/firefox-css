@@ -87,6 +87,7 @@
   --urlbarView-separator-color: transparent !important;
   --urlbarView-item-inline-padding: 4px !important;
   --urlbarView-item-block-padding: 4px !important;
+  --urlbarView-secondary-text-color: #6a9955 !important;
 
 
   --tab-selected-shadow: 0px !important;
@@ -130,6 +131,9 @@ toolbar {
 #urlbar-background, #searchbar {
   --toolbar-field-background-color: transparent;
 }
+urlbar-input::placeholder, .searchbar-textbox::placeholder {
+  opacity: 0.9 important!;
+}
 
 /* #toolbar-menu, #TabsToolbar, #nav-bar, #PersonalToolbar {
   background-color: rgba(0, 0, 0, 0.9);
@@ -142,8 +146,6 @@ toolbar {
   }
 }
 
-#urlbar
-
 .urlbar-input #urlbar .urlbar-input-container {
   color: #ce9178;
 }
@@ -151,6 +153,10 @@ toolbar {
 #urlbar-container {
   color: #ce9178;
   --urlbar-container-height: 32px;
+  --toolbar-field-unfocused-color: #6a9955 !important;
+  &:not([focused]) {
+    color: var(--toolbar-field-unfocused-color);
+  }
 }
 
 #urlbar {
