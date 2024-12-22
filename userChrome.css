@@ -63,7 +63,6 @@
   --toolbarbutton-border-radius: 4px !important;
 
   --toolbar-field-focus-color: #ce9178 !important;
-  --toolbar-field-unfocused-color: #6a9955 !important;
   --toolbar-field-focus-border-color: #ce9178 !important;
 
   --titlebar-bgcolor: var(--vscode-theme-background) !important;
@@ -89,6 +88,8 @@
   --urlbarView-item-inline-padding: 4px !important;
   --urlbarView-item-block-padding: 4px !important;
   --urlbarView-secondary-text-color: #6a9955 !important;
+  --urlbarView-highlight-background: transparent !important;
+  --urlbarView-highlight-color: #ce9178 !important;
 
 
   --tab-selected-shadow: 0px !important;
@@ -132,6 +133,9 @@ toolbar {
 #urlbar-background, #searchbar {
   --toolbar-field-background-color: transparent;
 }
+urlbar-input::placeholder, .searchbar-textbox::placeholder {
+  opacity: 0.9 important!;
+}
 
 /* #toolbar-menu, #TabsToolbar, #nav-bar, #PersonalToolbar {
   background-color: rgba(0, 0, 0, 0.9);
@@ -144,8 +148,6 @@ toolbar {
   }
 }
 
-#urlbar
-
 .urlbar-input #urlbar .urlbar-input-container {
   color: #ce9178;
 }
@@ -153,6 +155,10 @@ toolbar {
 #urlbar-container {
   color: #ce9178;
   --urlbar-container-height: 32px;
+  --toolbar-field-unfocused-color: #6a9955 !important;
+  &:not([focused]) {
+    color: var(--toolbar-field-unfocused-color);
+  }
 }
 
 #urlbar {
@@ -163,6 +169,41 @@ toolbar {
 .urlbar-icon {
   height: 12px;
   width: 12px;
+}
+
+/* #urlbar-go-button, 
+#search-go-button {
+  fill: #9cdcfe;
+} */
+
+#urlbar:is([focused], [open]), #searchbar:focus-within {
+  color: #9cdcfe important!;
+}
+
+.urlbarView-url {
+  color: #6a9955 !important;
+}
+
+.urlbarView {
+  color: #9cdcfe;
+}
+
+.urlbarView-row-inner {
+  &[selected] {
+    border: 2px solid #ce9178 !important;
+    border-radius: 10px;
+  }
+}
+
+#urlbar:is([focused], [open]) {
+  border-top-right-radius: 10px !important;
+  border-top-left-radius: 10px !important;
+  border: 2px solid #9cdcfe !important;
+}
+
+#urlbar:is([focused], [open]) > #urlbar-background {
+  border-top-right-radius: 10px !important;
+  border-top-left-radius: 10px !important;
 }
 
 .sidebar-splitter {
@@ -199,8 +240,6 @@ toolbarbutton#PanelUI-menu-button .toolbarbutton-badge-stack .toolbarbutton-icon
   height: 16px;
   width: 16px;
 }
-
-
 
 toolbar .toolbarbutton-1 {
   & .toolbarbutton-icon {
