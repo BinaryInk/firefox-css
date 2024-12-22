@@ -127,6 +127,10 @@ toolbar {
   }
 }
 
+#urlbar-background, #searchbar {
+  --toolbar-field-background-color: transparent;
+}
+
 /* #toolbar-menu, #TabsToolbar, #nav-bar, #PersonalToolbar {
   background-color: rgba(0, 0, 0, 0.9);
 } */
@@ -138,6 +142,7 @@ toolbar {
   }
 }
 
+#urlbar
 
 .urlbar-input #urlbar .urlbar-input-container {
   color: #ce9178;
