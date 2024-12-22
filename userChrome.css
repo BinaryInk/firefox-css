@@ -195,13 +195,13 @@ urlbar-input::placeholder, .searchbar-textbox::placeholder {
   }
 }
 
-#urlbar:is([focused], [open]) {
+#urlbar[breakout][breakout-extend] {
   border-top-right-radius: 10px !important;
   border-top-left-radius: 10px !important;
   border: 2px solid #9cdcfe !important;
 }
 
-#urlbar:is([focused], [open]) > #urlbar-background {
+#urlbar[breakout][breakout-extend] > #urlbar-background {
   border-top-right-radius: 10px !important;
   border-top-left-radius: 10px !important;
 }
