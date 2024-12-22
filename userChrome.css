@@ -118,20 +118,11 @@ body {
   font-size: 11.5px;
 }
 
-#nav-bar,
-#TabsToolbar,
-#toolbar-menubar,
-toolbar {
+.browser-toolbar, #nav-bar {
   background-color: var(--vscode-theme-background);
   &:where(:-moz-window-inactive) {
     background-color: var(--vscode-theme-background-inactive);
   }
-}
-
-.browser-toolbar {
-  background-color: var(--vscode-theme-background) !important;
-  /* color: var(--toolbar-color); */
-  border-style: none;
 }
 
 /* #toolbar-menu, #TabsToolbar, #nav-bar, #PersonalToolbar {

@@ -2,31 +2,21 @@
   Unsets elements default backgrounds to allow for transparency effects.
 */
 
-#nav-bar,
-#TabsToolbar,
-#toolbar-menubar,
-#PersonalToolbar,
 toolbar {
+  &:where(:-moz-window-inactive) {
+    background: unset !important;
+  }
+}
+
+toolbar:not(#nav-bar) {
   background: unset !important;
-  background-color: transparent !important;
   border: unset !important;
   box-shadow: unset !important;
   opacity: unset !important;
   &:where(:-moz-window-inactive) {
     background: unset !important;
-    background-color: transparent !important;
     border: unset !important;
     box-shadow: unset !important;
-    opacity: unset !important;
-  }
-}
-.browser-toolbar {
-  background: unset !important;
-  background-color: transparent !important;
-  opacity: unset !important;
-  &:not(.browser-titlebar) {
-    background: unset !important;
-    background-color: transparent !important;
     opacity: unset !important;
   }
 }
@@ -37,35 +27,15 @@ toolbar {
 #PersonalToolbar {
   background: unset;
 }
-
-
-
 .browser-titlebar {
+  background: unset !important;
   :root[tabsintitlebar] & {
     &:where(:-moz-window-inactive) {
       opacity: unset !important;
-      background: unset !important;
-      background-color: transparent !important;
+      background: unset !important; 
     }
-  }
-}
-.browser-titlebar {
-  background: unset !important;
-  background-color: transparent !important;
-}
-
-.browser-titlebar {
-  :root[tabsintitlebar] & {
     will-change: unset;
     transition: unset;
     background: unset;
-    background-color: transparent !important;
-  }
-}
-
-.browser-toolbar {
-  &:not(.browser-titlebar) {
-    background: unset;
-    background-color: transparent !important;
   }
 }
