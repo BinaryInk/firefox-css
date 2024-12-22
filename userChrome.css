@@ -248,16 +248,14 @@ toolbarbutton#reload-button {
 }  */
 
 /* var(--toolbox-non-lwt-bgcolor-inactive) */
-:root:not([inFullscreen]){
-    --uc-bottom-toolbar-height: calc(26px + var(--toolbarbutton-outer-padding) )
-  }
+:root:not([inFullscreen]),
+:root[uidensity="compact"]:not([inFullscreen]),
+:root[inFullscreen] {
+  --uc-bottom-toolbar-height: calc(32px + var(--toolbarbutton-outer-padding) )
+}
 
-  :root[uidensity="compact"]:not([inFullscreen]){
-    --uc-bottom-toolbar-height: calc(32px + var(--toolbarbutton-outer-padding) )
-  }
-
-  #browser,
-  #customization-container{ 
+#browser,
+#customization-container{ 
       margin-bottom: var(--uc-bottom-toolbar-height,0px);
 }
 #nav-bar{
