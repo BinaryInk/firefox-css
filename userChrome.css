@@ -140,6 +140,7 @@ toolbar {
 
 #urlbar-background, #searchbar {
   --toolbar-field-background-color: transparent;
+  border: none;
 }
 urlbar-input::placeholder, .searchbar-textbox::placeholder {
   opacity: 0.9 important!;
@@ -175,6 +176,9 @@ urlbar-input::placeholder, .searchbar-textbox::placeholder {
   --urlbar-height: 30px;
   position: fixed !important;
   bottom: 0px;
+  &:where([focused]) {
+    background-color: black;
+  }
 }
 
 .urlbar-icon {
@@ -189,6 +193,20 @@ urlbar-input::placeholder, .searchbar-textbox::placeholder {
 
 #urlbar:is([focused], [open]), #searchbar:focus-within {
   color: #9cdcfe important!;
+}
+
+#urlbar:is([focused]) { 
+  &> #urlbar-background {
+    outline: none !important;
+  }
+  background-color: black;
+}
+
+#urlbar:is([focused], [open]) {
+  &:not([breakout][breakout-extend])> #urlbar-background {
+    background: none !important;
+  }
+  background-color: black;
 }
 
 .urlbarView-url {
@@ -216,13 +234,14 @@ urlbar-input::placeholder, .searchbar-textbox::placeholder {
 #urlbar[breakout][breakout-extend] > #urlbar-background {
   border-radius: 10px !important;
   display: -webkit-box;
-  box-shadow: 0 0 7px 7px var(--vscode-theme-border) !important;
+  box-shadow: 0 0 7px 7px rgba(0, 0, 0, 0.5) !important;
   
 }
 
 #urlbar[breakout][breakout-extend] > .urlbar-input-container {
 	position: fixed !important;
 	bottom: 0px;
+  border: none !important;
 }
 
 .sidebar-splitter {
@@ -248,7 +267,8 @@ toolbarbutton#PanelUI-menu-button .toolbarbutton-badge-stack {
   /*     border-top-left-radius: 10px; */
   /*     border-top-right-radius: 10px; */
   /*     fill: black !important; */
-  margin-right: 12px
+/*   margin-right: 12px */
+  padding: 0px;
 }
 
 toolbarbutton#PanelUI-menu-button {
@@ -271,9 +291,10 @@ toolbar .toolbarbutton-1 {
   &>.toolbarbutton-badge-stack,
   &>.toolbarbutton-badge-stack>box {
     padding: 0px !important;
-    border-radius: 4px !important;
+    border-radius: 2px !important;
     margin-top: 0px !important;
   }
+  padding: 5px !important;
 }
 
 .unified-extensions-item-action-button .toolbarbutton-badge-stack {
@@ -283,8 +304,8 @@ toolbar .toolbarbutton-1 {
     height: 20px !important; */
 }
 
-.unified-extensions-item-action-button .toolbarbutton-badge-stack .toolbarbutton-icon,
-#downloads-button box image {
+.unified-extensions-item-action-button .toolbarbutton-badge-stack .toolbarbutton-icon
+ {
   width: 14px !important;
   height: 14px !important;
 }
@@ -296,6 +317,9 @@ toolbar .toolbarbutton-1 {
   }
 }
 
+#back-button {
+  padding-left: 10px !important;
+}
 /* toolbarbutton#back-button,
 toolbarbutton#forward-button {
   &:not([disabled]) {
@@ -317,9 +341,10 @@ toolbarbutton#forward-button {
 }
 
 #navigator-toolbox {
-  border-top-width: 1px !important;
-  border-top-style: solid !important;
-  border-top-color: var(--vscode-theme-border) !important;
+  border: 0px solid transparent !important;
+  border-bottom-width: 1px !important;
+  border-bottom-style: solid !important;
+  border-color: var(--vscode-theme-border) !important;
 }
 
 #nav-bar,
