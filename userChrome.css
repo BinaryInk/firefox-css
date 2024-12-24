@@ -49,8 +49,8 @@
 }
 
 :root {
-  --vscode-theme-background: rgba(0, 0, 0, 0.85) !important;
-  --vscode-theme-background-inactive: rgba(0, 0, 0, 0.6) !important;
+  --vscode-theme-background: rgba(0, 0, 0, 0.75) !important;
+  --vscode-theme-background-inactive: rgba(0, 0, 0, 0.70) !important;
   --vscode-theme-accent1: #9cdcfe;
   --vscode-theme-accent2: #bd81b8;
   --vscode-theme-border: var(--vscode-theme-accent1);
