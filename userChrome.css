@@ -215,6 +215,9 @@ urlbar-input::placeholder, .searchbar-textbox::placeholder {
 
 #urlbar[breakout][breakout-extend] > #urlbar-background {
   border-radius: 10px !important;
+  display: -webkit-box;
+  box-shadow: 0 0 7px 7px var(--vscode-theme-border) !important;
+  
 }
 
 #urlbar[breakout][breakout-extend] > .urlbar-input-container {
