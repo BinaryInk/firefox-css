@@ -442,5 +442,5 @@ toolbarbutton#reload-button {
 
 .titlebar-spacer[type="pre-tabs"], 
 .titlebar-spacer[type="post-tabs"] {
-  width: 0px;
+  width: 0px !important;
 }
