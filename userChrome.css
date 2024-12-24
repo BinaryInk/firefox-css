@@ -238,7 +238,8 @@ urlbar-input::placeholder, .searchbar-textbox::placeholder {
   border-radius: 10px !important;
   display: -webkit-box;
   box-shadow: 0 0 7px 7px rgba(0, 0, 0, 0.5) !important;
-  
+  backdrop-filter: blur(50px) !important;;
+  background-color: rgba(0, 0, 0, 0.85) !important;
 }
 
 #urlbar[breakout][breakout-extend] > .urlbar-input-container {
