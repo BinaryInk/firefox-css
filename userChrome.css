@@ -310,21 +310,23 @@ toolbarbutton#forward-button {
 } */
 
 #nav-bar {
-  border-width: 1px !important;
-  border-style: solid !important;
-  border-color: var(--vscode-theme-border) !important;
+  border: 0px solid transparent !important;
+  border-top-width: 1px !important;
+  border-top-style: solid !important;
+  border-top-color: var(--vscode-theme-border) !important;
 }
 
 #navigator-toolbox {
-  border-width: 1px !important;
-  border-style: solid !important;
-  border-color: var(--vscode-theme-border) !important;
+  border-top-width: 1px !important;
+  border-top-style: solid !important;
+  border-top-color: var(--vscode-theme-border) !important;
 }
 
 #nav-bar,
 #navigator-toolbox {
   &:where(:-moz-window-inactive) {
     border-color: var(--vscode-theme-border-inactive) !important;
+    background-color: var(--vscode-theme-background-inactive) !important;
   }
 }
 
