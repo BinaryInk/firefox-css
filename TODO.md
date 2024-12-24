@@ -1,15 +1,11 @@
 - TODO Segment changes into separate files?
-- TODO Change colors when inactive window to match Hyprland
 - TODO Border on panel
 - TODO Make more elements compact (e.g., settings drop-down, downloads drop-down, extension drop-down, etc.)
 - FIX icons in address bar
-- FIX extension icons
-- FIX download icon
+- FIX URL overflow when focused
 - TODO Add panel animation (?)
-- TODO Add left margin to back button
 - TODO Modify native tab appearance
-- TODO Custom CSS for sidebery to match
+- TODO Remove empty space at top right
+- TODO Fix padding of tab drop-down button
 - TODO Wallpaper
-- FIX URL bar contents 'shift' after it's been activated and de-activated
-- FIX URL bar obscured while typying due to breakout view
 - TODO Dynamic theme selection by light/dark
