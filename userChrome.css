@@ -150,6 +150,8 @@ urlbar-input::placeholder, .searchbar-textbox::placeholder {
 
 .urlbar-input #urlbar .urlbar-input-container {
   color: #ce9178;
+  position: fixed !important;
+  bottom: 0px !important;
 }
 
 #urlbar-container {
@@ -163,6 +165,7 @@ urlbar-input::placeholder, .searchbar-textbox::placeholder {
 
 #urlbar {
   --urlbar-height: 30px;
+  position: fixed !important;
   bottom: 0px;
 }
 
@@ -189,6 +192,7 @@ urlbar-input::placeholder, .searchbar-textbox::placeholder {
 }
 
 .urlbarView-row-inner {
+  border: solid 2px transparent !important;
   &[selected] {
     border: 2px solid #ce9178 !important;
     border-radius: 10px;
@@ -196,14 +200,18 @@ urlbar-input::placeholder, .searchbar-textbox::placeholder {
 }
 
 #urlbar[breakout][breakout-extend] {
-  border-top-right-radius: 10px !important;
-  border-top-left-radius: 10px !important;
+  border-radius: 10px !important;
   border: 2px solid #9cdcfe !important;
+  margin-bottom: 40px !important;
 }
 
 #urlbar[breakout][breakout-extend] > #urlbar-background {
-  border-top-right-radius: 10px !important;
-  border-top-left-radius: 10px !important;
+  border-radius: 10px !important;
+}
+
+#urlbar[breakout][breakout-extend] > .urlbar-input-container {
+	position: fixed !important;
+	bottom: 0px;
 }
 
 .sidebar-splitter {
