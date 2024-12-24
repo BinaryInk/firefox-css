@@ -4,8 +4,5 @@
 - FIX icons in address bar
 - FIX URL overflow when focused
 - TODO Add panel animation (?)
-- TODO Modify native tab appearance
-- TODO Remove empty space at top right
-- TODO Fix padding of tab drop-down button
 - TODO Wallpaper
 - TODO Dynamic theme selection by light/dark
