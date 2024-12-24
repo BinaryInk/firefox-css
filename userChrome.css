@@ -289,7 +289,7 @@ toolbar .toolbarbutton-1 {
   }
 }
 
-toolbarbutton#back-button,
+/* toolbarbutton#back-button,
 toolbarbutton#forward-button {
   &:not([disabled]) {
     fill: black !important;
@@ -300,18 +300,18 @@ toolbarbutton#forward-button {
     fill: black !important;
     background: #9cdcfe !important;
   }
-}
+} */
 
 #nav-bar {
-  border-top: 2px solid #9cdcfe !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.11) !important;
 }
 
 #navigator-toolbox {
-  border-bottom: 2px solid #9cdcfe !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.11) !important;
 
 }
 
-toolbarbutton#reload-button {
+/* toolbarbutton#reload-button {
   fill: black !important;
 
   &[disabled] {
@@ -323,12 +323,12 @@ toolbarbutton#reload-button {
     fill: black !important;
     background: #bd81b8 !important;
   }
-}
+} */
 
-toolbarbutton#stop-button {
+/* toolbarbutton#stop-button {
   fill: black !important;
   background: #ce9178 !important;
-}
+} */
 
 /* toolbarbutton#stop-button,
 toolbarbutton#reload-button {
@@ -340,7 +340,7 @@ toolbarbutton#reload-button {
 :root:not([inFullscreen]),
 :root[uidensity="compact"]:not([inFullscreen]),
 :root[inFullscreen] {
-  --uc-bottom-toolbar-height: calc(32px + var(--toolbarbutton-outer-padding))
+  --uc-bottom-toolbar-height: calc(28px + var(--toolbarbutton-outer-padding))
 }
 
 #browser,
