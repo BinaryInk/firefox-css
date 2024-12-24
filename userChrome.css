@@ -303,12 +303,11 @@ toolbarbutton#forward-button {
 } */
 
 #nav-bar {
-  border-top: 1px solid rgba(255, 255, 255, 0.11) !important;
+  border-top: 1px solid rgba(156, 220, 254, 1) !important;
 }
 
 #navigator-toolbox {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.11) !important;
-
+  border-bottom: 1px solid rgba(156, 220, 254, 1) !important;
 }
 
 /* toolbarbutton#reload-button {
