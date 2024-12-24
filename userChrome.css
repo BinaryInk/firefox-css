@@ -15,7 +15,7 @@
 
 /* Default state: Set initial height to enable animation */
 #main-window #TabsToolbar>.toolbar-items {
-  height: 3em !important;
+  height: 2.75em !important;
 }
 
 #main-window[uidensity="touch"] #TabsToolbar>.toolbar-items {
@@ -23,7 +23,7 @@
 }
 
 #main-window[uidensity="compact"] #TabsToolbar>.toolbar-items {
-  height: 2.7em !important;
+  height: 2.75em !important;
 }
 
 /* Hidden state: Hide native tabs strip */
@@ -49,7 +49,7 @@
 }
 
 :root {
-  --vscode-theme-background: rgba(0, 0, 0, 0.75) !important;
+  --vscode-theme-background: rgba(0, 0, 0, 0.8) !important;
   --vscode-theme-background-inactive: rgba(0, 0, 0, 0.70) !important;
   --vscode-theme-accent1: #9cdcfe;
   --vscode-theme-accent2: #bd81b8;
@@ -98,22 +98,25 @@
   --urlbarView-secondary-text-color: #6a9955 !important;
   --urlbarView-highlight-background: transparent !important;
   --urlbarView-highlight-color: #ce9178 !important;
-
-
+  
   --tab-selected-shadow: 0px !important;
-  --tab-selected-bgcolor: #9cdcfe50 !important;
+  --tab-selected-bgcolor: var(--vscode-theme-accent1) !important;
+  --tab-selected-bgcolor-inactive: var(--vscode-theme-accent2) !important;
   --tab-min-height: 16px !important;
   --tab-group-label-height: 16px !important;
   --tab-inner-inline-margin: 4px !important;
   --tab-inline-padding: 4px !important;
   --tab-pinned-expanded-background-width: 40px !important;
-  --tab-border-radius: 10px !important;
+  --tab-border-radius: 0px !important;
   --tab-shadow-max-size: 0px !important;
   --tab-block-margin: 0px !important;
   --tab-icon-end-margin: 4px !important;
   --tab-label-line-height: 1.2 !important;
   --tab-hover-background-color: #dcdcaa50 !important;
   --tab-outline: 2px solid var(--tab-outline-color) !important;
+  --tab-loading-fill: var(--vscode-theme-accent1) !important;
+  --tab-selected-textcolor: black !important;
+  
   --tabstrip-inner-border: none !important;
 
   --tabstrip-min-height: 16px !important;
@@ -419,4 +422,19 @@ toolbarbutton#reload-button {
 
 .urlbarView-body-inner {
   border-top-style: none !important;
+}
+
+.titlebar-spacer[type="pre-tabs"], .titlebar-spacer[type="post-tabs"] {
+	width: 0px;
+}
+
+#main-window #TabsToolbar > .toolbar-items {
+	height: 2.75em !important;
+	padding: 0px 5px 0px 5px;
+}
+
+.tab-background {
+  &:is([selected], [multiselected])&:where(:-moz-window-inactive) {
+    background-color: var(--tab-selected-bgcolor-inactive) !important;
+  }
 }
