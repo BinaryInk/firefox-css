@@ -51,6 +51,7 @@
 :root {
   --vscode-theme-background: rgba(0, 0, 0, 0.8) !important;
   --vscode-theme-background-inactive: rgba(0, 0, 0, 0.70) !important;
+  --vscode-theme-foreground: rgb(255, 255, 255) !important;
   --vscode-theme-accent1: #9cdcfe;
   --vscode-theme-accent2: #bd81b8;
   --vscode-theme-border: var(--vscode-theme-accent1);
@@ -70,24 +71,12 @@
   --toolbarbutton-hover-background: #9cdcfe30 !important;
   --toolbarbutton-border-radius: 4px !important;
 
-  --toolbar-field-focus-color: #ce9178 !important;
-  --toolbar-field-focus-border-color: #ce9178 !important;
+  --toolbar-field-focus-color: var(--vscode-theme-accent1) !important;
+  --toolbar-field-focus-border-color: var(--vscode-theme-accent1) !important;
+  --toolbar-field-color: var(--vscode-theme-foreground) !important;
 
   --titlebar-bgcolor: var(--vscode-theme-background) !important;
   --titlebar-bgcolor-inactive: var(--vscode-theme-background) !important;
-
-  --urlbar-container-height: 20px !important;
-  --urlbar-min-height: 20px !important;
-  --urlbar-padding-block: 0px !important;
-  --urlbar-margin-block: 0px !important;
-  --urlbar-icon-padding: 4px !important;
-  --urlbar-icon-radius: 4px !important;
-  --urlbar-container-padding: 0px !important;
-  --urlbar-margin-inline: 0px !important;
-  --urlbar-box-bgcolor: transparent !important;
-  --urlbar-box-focus-bgcolor: transparent !important;
-  --urlbar-box-hover-bgcolor: transparent !important;
-
 
   --urlbarView-favicon-margin-start: 4px !important;
   --urlbarView-favicon-margin-end: 12px !important;
@@ -98,6 +87,18 @@
   --urlbarView-secondary-text-color: #6a9955 !important;
   --urlbarView-highlight-background: transparent !important;
   --urlbarView-highlight-color: #ce9178 !important;
+  
+   --urlbar-container-height: 20px !important;
+  --urlbar-min-height: 25px !important;
+/*   --urlbar-padding-block: 0px !important; */
+/*   --urlbar-margin-block: 0px !important; */
+/*   --urlbar-icon-padding: 0px !important; */
+  --urlbar-icon-radius: 0px !important;
+  --urlbar-container-padding: 0px !important;
+  --urlbar-margin-inline: 0px !important;
+  --urlbar-box-bgcolor: transparent !important;
+  --urlbar-box-focus-bgcolor: transparent !important;
+  --urlbar-box-hover-bgcolor: transparent !important;
   
   --tab-selected-shadow: 0px !important;
   --tab-selected-bgcolor: var(--vscode-theme-accent1) !important;
@@ -161,13 +162,13 @@ urlbar-input::placeholder, .searchbar-textbox::placeholder {
 }
 
 .urlbar-input #urlbar .urlbar-input-container {
-  color: #ce9178;
+/*   color: #ce9178; */
   position: fixed !important;
   bottom: 0px !important;
 }
 
 #urlbar-container {
-  color: #ce9178;
+  color: var(--vscode-theme-accent1);
   --urlbar-container-height: 32px;
   --toolbar-field-unfocused-color: #6a9955 !important;
   &:not([focused]) {
@@ -237,9 +238,9 @@ urlbar-input::placeholder, .searchbar-textbox::placeholder {
 #urlbar[breakout][breakout-extend] > #urlbar-background {
   border-radius: 10px !important;
   display: -webkit-box;
-  box-shadow: 0 0 7px 7px rgba(0, 0, 0, 0.5) !important;
+/*   box-shadow: 0 0 7px 7px rgba(0, 0, 0, 0.5) !important; */
   backdrop-filter: blur(50px) !important;;
-  background-color: rgba(0, 0, 0, 0.85) !important;
+  background-color: rgba(0, 0, 0, 0.9) !important;
 }
 
 #urlbar[breakout][breakout-extend] > .urlbar-input-container {
@@ -431,7 +432,6 @@ toolbarbutton#reload-button {
 
 #main-window #TabsToolbar > .toolbar-items {
 	height: 2.75em !important;
-	padding: 0px 5px 0px 5px;
 }
 
 .tab-background {
