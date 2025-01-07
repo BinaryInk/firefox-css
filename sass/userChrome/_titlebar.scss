@@ -1,0 +1,20 @@
+/* userChrome/titlebar */
+@use 'sass:map';
+
+:root {
+    --titlebar-bgcolor: rgba(map.get($theme-vscode-dark-presets, 'background'), 0.9) !important;
+    --titlebar-bgcolor-inactive: rgba(map.get($theme-vscode-dark-presets, 'background'), 0.9) !important;
+}
+
+.titlebar-spacer[type="pre-tabs"], .titlebar-spacer[type="post-tabs"] {
+	width: 0px;
+}
+
+.titlebar-spacer[type="pre-tabs"], 
+.titlebar-spacer[type="post-tabs"] {
+  width: 0px !important;
+}
+
+.titlebar-buttonbox-container {
+  display: none
+}

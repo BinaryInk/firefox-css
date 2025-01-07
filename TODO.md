@@ -1,8 +1,6 @@
-- TODO Segment changes into separate files?
-- TODO Border on panel
 - TODO Make more elements compact (e.g., settings drop-down, downloads drop-down, extension drop-down, etc.)
-- FIX icons in address bar
 - FIX URL overflow when focused
 - TODO Add panel animation (?)
 - TODO Wallpaper
 - TODO Dynamic theme selection by light/dark
+- TODO Different colors for 'secure' and 'insecure' URLs?

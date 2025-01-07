@@ -1,0 +1,21 @@
+@use 'sass:map';
+
+@import '../themes/theme-vscode.scss';
+$theme-vscode-dark-background-inactive: rgba(0,0,0,0.7);
+$theme-vscode-dark-foreground-inactive: rgba(255,255,255,0.7);
+$theme-vscode-light-background-inactive: rgba(255,255,255,0.7);
+$theme-vscode-light-foreground-inactive: rgba(0,0,0,0.7);
+$theme-vscode-dark-background: rgb(0,0,0);
+$theme-vscode-dark-foreground: rgb(255,255,255);
+$theme-vscode-light-background: rgb(255,255,255);
+$theme-vscode-light-foreground: rgb(0,0,0);
+$theme-vscode-dark-border-color: map.get($theme-vscode-dark-presets, 'accent1');
+$theme-vscode-dark-border-color-inactive: map.get($theme-vscode-dark-presets, 'accent2');
+@import 'transparency';
+@import 'sidebery';
+@import 'sidebar';
+@import 'base';
+@import 'tabs';
+@import 'toolbar';
+@import 'titlebar';
+@import 'urlbar';
