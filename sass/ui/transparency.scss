@@ -1,0 +1,42 @@
+/*
+  transparency.scss
+
+  Unsets properties of the navbar and other UI elements so it can be made transparent.
+*/
+toolbar {
+  &:where(:-moz-window-inactive) {
+    background: unset !important;
+  }
+  &:not(#nav-bar) {
+    background: unset !important;
+    border: unset !important;
+    box-shadow: unset !important;
+    opacity: unset !important;
+    &:where(:-moz-window-inactive) {
+      background: unset !important;
+      border: unset !important;
+      box-shadow: unset !important;
+      opacity: unset !important;
+    }
+  }
+}
+
+#main-window #main-menubar>menu> :is(label, description) {
+  color: var(--general-toolbar-text-color, inherit) !important;
+  text-shadow: unset;
+}
+#PersonalToolbar {
+  background: unset;
+}
+.browser-titlebar {
+  background: unset !important;
+  :root[tabsintitlebar] & {
+    &:where(:-moz-window-inactive) {
+      opacity: unset !important;
+      background: unset !important;
+    }
+    will-change: unset;
+    transition: unset;
+    background: unset;
+  }
+}
