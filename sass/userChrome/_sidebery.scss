@@ -1,0 +1,43 @@
+/* 
+    /userChrome/sidebery.scss
+
+    Provides auto-hiding tab bar with animation
+*/
+// Original source: https://github.com/mbnuqw/sidebery/wiki/Firefox-Styles-Snippets-(via-userChrome.css)#completely-hide-native-tabs-strip
+
+#main-window #TabsToolbar>.toolbar-items {
+  overflow: hidden;
+  transition: height 0.3s 0.3s !important; // TODO Custom animation
+  /* Default state: Set initial height to enable animation */
+  height: 2.75em !important;
+}
+
+#main-window[uidensity="touch"] #TabsToolbar>.toolbar-items {
+  height: 3.35em !important;
+}
+
+#main-window[uidensity="compact"] #TabsToolbar>.toolbar-items {
+  height: 2.75em !important;
+}
+
+
+#main-window[titlepreface*="XXX"] {
+  #TabsToolbar>.toolbar-items {
+    /* Hidden state: Hide native tabs strip */
+    height: 0 !important
+  }
+  #tabbrowser-tabs {
+    /* Hidden state: Fix z-index of active pinned tabs */
+    z-index: 0 !important;
+  }
+  #TabsToolbar {
+    .titlebar-spacer, .titlebar-buttonbox-container {
+      /* Hidden state: Hide window buttons in tabs-toolbar */
+      display: none !important
+    }
+    border: none !important;
+  }
+  #navigator-toolbox {
+    border: none !important;
+  }
+}
