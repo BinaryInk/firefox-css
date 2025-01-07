@@ -1,0 +1,133 @@
+/* userChrome/_urlbar */
+@use 'sass:map';
+
+:root {
+    --urlbar-container-height: 20px !important;
+    --urlbar-min-height: 25px !important;
+  /*   --urlbar-padding-block: 0px !important; */
+  /*   --urlbar-margin-block: 0px !important; */
+  /*   --urlbar-icon-padding: 0px !important; */
+    --urlbar-icon-radius: 0px !important;
+    --urlbar-container-padding: 0px !important;
+    --urlbar-margin-inline: 0px !important;
+    --urlbar-box-bgcolor: transparent !important;
+    --urlbar-box-focus-bgcolor: transparent !important;
+    --urlbar-box-hover-bgcolor: transparent !important;
+
+    --urlbarView-favicon-margin-start: 4px !important;
+    --urlbarView-favicon-margin-end: 12px !important;
+    --urlbarView-hover-background: #dcdcaa50 !important;
+    --urlbarView-separator-color: transparent !important;
+    --urlbarView-item-inline-padding: 4px !important;
+    --urlbarView-item-block-padding: 4px !important;
+    --urlbarView-secondary-text-color: #6a9955 !important;
+    --urlbarView-highlight-background: transparent !important;
+    --urlbarView-highlight-color: #ce9178 !important;
+}
+
+#urlbar-background, #searchbar {
+  --toolbar-field-background-color: transparent;
+  border: none;
+}
+urlbar-input::placeholder, .searchbar-textbox::placeholder {
+  opacity: 0.9 !important;
+}
+
+.urlbar-input #urlbar .urlbar-input-container {
+  /*   color: #ce9178; */
+  position: fixed !important;
+  bottom: 0px !important;
+}
+
+#urlbar-container {
+  color: map.get($theme-vscode-dark-presets, 'accent1');
+  --urlbar-container-height: 32px;
+  --toolbar-field-unfocused-color: #6a9955 !important;
+  &:not([focused]) {
+    color: var(--toolbar-field-unfocused-color);
+  }
+}
+
+#urlbar {
+  --urlbar-height: 30px;
+  position: fixed !important;
+  bottom: 0px;
+  &:where([focused]) {
+    background-color: black;
+  }
+}
+
+.urlbar-icon {
+  height: 12px;
+  width: 12px;
+}
+
+/* #urlbar-go-button, 
+#search-go-button {
+  fill: #9cdcfe;
+} */
+  
+  #urlbar:is([focused], [open]), #searchbar:focus-within {
+  color: #9cdcfe !important;
+}
+
+#urlbar:is([focused]) { 
+  &> #urlbar-background {
+    outline: none !important;
+  }
+  background-color: black;
+}
+
+#urlbar:is([focused], [open]) {
+  &:not([breakout][breakout-extend])> #urlbar-background {
+    background: none !important;
+  }
+  background-color: black;
+}
+
+.urlbarView-url {
+  color: #6a9955 !important;
+}
+
+.urlbarView {
+  color: #9cdcfe;
+}
+
+.urlbarView-row-inner {
+  border: solid 2px transparent !important;
+  &[selected] {
+    border: 2px solid #ce9178 !important;
+    border-radius: 10px;
+  }
+}
+
+#urlbar[breakout][breakout-extend] {
+  border-radius: 10px !important;
+  border: 2px solid #9cdcfe !important;
+  margin-bottom: 40px !important;
+}
+
+#urlbar[breakout][breakout-extend] > #urlbar-background {
+  border-radius: 10px !important;
+  display: -webkit-box;
+/*   box-shadow: 0 0 7px 7px rgba(0, 0, 0, 0.5) !important; */
+  backdrop-filter: blur(50px) !important;;
+  background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+#urlbar[breakout][breakout-extend] > .urlbar-input-container {
+  position: fixed !important;
+  bottom: 0px;
+  border: none !important;
+}
+
+#urlbar[breakout][breakout-extend] {
+  display: flex !important;
+  flex-direction: column-reverse;
+  bottom: 0px !important;
+  top: auto !important;
+}
+
+.urlbarView-body-inner {
+  border-top-style: none !important;
+}

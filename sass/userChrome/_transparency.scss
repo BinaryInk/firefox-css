@@ -31,12 +31,14 @@ toolbar {
 .browser-titlebar {
   background: unset !important;
   :root[tabsintitlebar] & {
+    & {
+      will-change: unset;
+      transition: unset;
+      background: unset;
+    }
     &:where(:-moz-window-inactive) {
       opacity: unset !important;
       background: unset !important;
     }
-    will-change: unset;
-    transition: unset;
-    background: unset;
   }
 }

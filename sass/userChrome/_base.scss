@@ -1,0 +1,16 @@
+/* userChrome/_base.scss */
+@use 'sass:map';
+
+:root {
+  --size-item-small: 10px !important;
+  --size-item-medium: 14px !important;
+  --size-item-large: 18px !important;
+
+  --button-boder-radius: 10px !important;
+
+  --sidebar-background-color: rgba(map.get($theme-vscode-dark-presets, 'background'), 0.9);
+}
+
+body {
+  font-size: 11.5px;
+}
