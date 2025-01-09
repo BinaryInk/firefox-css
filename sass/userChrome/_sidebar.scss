@@ -9,6 +9,7 @@
 }
 
 .sidebar-splitter {
-  width: 4px;
-  background-color: rgba(0, 0, 0, 0.5) !important;
+  width: 1px !important;
+  background-color: $theme-vscode-dark-border-color !important;
+  border: none !important;
 }

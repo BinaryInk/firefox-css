@@ -1,14 +1,17 @@
 /* userChrome/_base.scss */
 @use 'sass:map';
 
+// Stuff that needs to be applied first. Some is erata I otherwise don't have a
+// place for.
+
 :root {
   --size-item-small: 10px !important;
   --size-item-medium: 14px !important;
   --size-item-large: 18px !important;
 
-  --button-boder-radius: 10px !important;
+  --button-border-radius: 10px !important;
 
-  --sidebar-background-color: rgba(map.get($theme-vscode-dark-presets, 'background'), 0.9);
+  --sidebar-background-color: rgba(map.get($theme-vscode-dark-presets, 'background'), 1);
 }
 
 body {

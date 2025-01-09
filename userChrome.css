@@ -89,8 +89,9 @@ toolbar:not(#nav-bar):where(:-moz-window-inactive) {
 }
 
 .sidebar-splitter {
-  width: 4px;
-  background-color: rgba(0, 0, 0, 0.5) !important;
+  width: 1px !important;
+  background-color: rgba(211.65, 211.65, 211.65, 0.4) !important;
+  border: none !important;
 }
 
 /* userChrome/_base.scss */
@@ -98,8 +99,8 @@ toolbar:not(#nav-bar):where(:-moz-window-inactive) {
   --size-item-small: 10px !important;
   --size-item-medium: 14px !important;
   --size-item-large: 18px !important;
-  --button-boder-radius: 10px !important;
-  --sidebar-background-color: rgba(map.get($theme-vscode-dark-presets, "background"), 0.9);
+  --button-border-radius: 10px !important;
+  --sidebar-background-color: rgba(map.get($theme-vscode-dark-presets, "background"), 1);
 }
 
 body {
@@ -227,19 +228,19 @@ toolbarbutton#forward-button {
   border: 0px solid transparent !important;
   border-top-width: 1px !important;
   border-top-style: solid !important;
-  border-top-color: hsl(201, 98%, 80%) !important;
+  border-top-color: rgba(211.65, 211.65, 211.65, 0.4) !important;
 }
 
 #navigator-toolbox {
   border: 0px solid transparent !important;
   border-bottom-width: 1px !important;
   border-bottom-style: solid !important;
-  border-color: hsl(201, 98%, 80%) !important;
+  border-color: rgba(211.65, 211.65, 211.65, 0.4) !important;
 }
 
 #nav-bar:where(:-moz-window-inactive),
 #navigator-toolbox:where(:-moz-window-inactive) {
-  border-color: hsl(305, 31%, 62%) !important;
+  border-color: rgba(211.65, 211.65, 211.65, 0.2) !important;
   background-color: rgba(0, 0, 0, 0.7) !important;
 }
 
