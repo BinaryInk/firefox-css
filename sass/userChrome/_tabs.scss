@@ -5,6 +5,7 @@
   --tab-selected-shadow: 0px !important;
   --tab-selected-bgcolor: map.get($theme-vscode-dark-presets, 'accent1') !important;
   --tab-selected-bgcolor-inactive: map.get($theme-vscode-dark-presets, 'accent2') !important;
+  --tab-selected-textcolor: rgb(255, 255, 255);
   --tab-min-height: 16px !important;
   --tab-group-label-height: 16px !important;
   --tab-inner-inline-margin: 4px !important;
@@ -25,6 +26,9 @@
 }
 
 .tab-background {
+  &:is([selected], [multiselected]) {
+    background-color: var(--tab-selected-bgcolor) !important;
+  }
   &:is([selected], [multiselected]),
   &:where(:-moz-window-inactive) {
     background-color: var(--tab-selected-bgcolor-inactive) !important;
