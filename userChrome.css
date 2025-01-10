@@ -89,8 +89,9 @@ toolbar:not(#nav-bar):where(:-moz-window-inactive) {
 }
 
 .sidebar-splitter {
-  width: 4px;
-  background-color: rgba(0, 0, 0, 0.5) !important;
+  width: 1px !important;
+  background-color: rgba(211.65, 211.65, 211.65, 0.4) !important;
+  border: none !important;
 }
 
 /* userChrome/_base.scss */
@@ -98,8 +99,8 @@ toolbar:not(#nav-bar):where(:-moz-window-inactive) {
   --size-item-small: 10px !important;
   --size-item-medium: 14px !important;
   --size-item-large: 18px !important;
-  --button-boder-radius: 10px !important;
-  --sidebar-background-color: rgba(map.get($theme-vscode-dark-presets, "background"), 0.9);
+  --button-border-radius: 10px !important;
+  --sidebar-background-color: rgba(map.get($theme-vscode-dark-presets, "background"), 1);
 }
 
 body {
@@ -111,6 +112,7 @@ body {
   --tab-selected-shadow: 0px !important;
   --tab-selected-bgcolor: map.get($theme-vscode-dark-presets, "accent1") !important;
   --tab-selected-bgcolor-inactive: map.get($theme-vscode-dark-presets, "accent2") !important;
+  --tab-selected-textcolor: rgb(255, 255, 255);
   --tab-min-height: 16px !important;
   --tab-group-label-height: 16px !important;
   --tab-inner-inline-margin: 4px !important;
@@ -129,6 +131,9 @@ body {
   --tabstrip-min-height: 16px !important;
 }
 
+.tab-background:is([selected], [multiselected]) {
+  background-color: var(--tab-selected-bgcolor) !important;
+}
 .tab-background:is([selected], [multiselected]), .tab-background:where(:-moz-window-inactive) {
   background-color: var(--tab-selected-bgcolor-inactive) !important;
 }
@@ -137,6 +142,8 @@ body {
 :root {
   --toolbox-non-lwt-bgcolor: rgba(0, 0, 0, 0.8) !important;
   --toolbox-non-lwt-bgcolor-inactive: rgba(0, 0, 0, 0.7) !important;
+  --toolbox-bgcolor: rgba(0, 0, 0, 0.8) !important;
+  --toolbox-textcolor: rgb(255, 255, 255) !important;
   --toolbar-non-lwt-bgcolor: rgba(0, 0, 0, 0.8) !important;
   --toolbar-non-lwt-bgcolor-inactive: rgba(0, 0, 0, 0.7) !important;
   --toolbar-start-end-padding: 0px !important;
@@ -148,6 +155,7 @@ body {
   --toolbar-field-focus-color: map.get($theme-vscode-dark-presets, "accent1") !important;
   --toolbar-field-focus-border-color: map.get($theme-vscode-dark-presets, "accent1") !important;
   --toolbar-field-color: #ffffff !important;
+  --toolbar-bgcolor: rgba(0, 0, 0, 0.8) !important;
 }
 
 toolbar {
@@ -227,19 +235,19 @@ toolbarbutton#forward-button {
   border: 0px solid transparent !important;
   border-top-width: 1px !important;
   border-top-style: solid !important;
-  border-top-color: hsl(201, 98%, 80%) !important;
+  border-top-color: rgba(211.65, 211.65, 211.65, 0.4) !important;
 }
 
 #navigator-toolbox {
   border: 0px solid transparent !important;
   border-bottom-width: 1px !important;
   border-bottom-style: solid !important;
-  border-color: hsl(201, 98%, 80%) !important;
+  border-color: rgba(211.65, 211.65, 211.65, 0.4) !important;
 }
 
 #nav-bar:where(:-moz-window-inactive),
 #navigator-toolbox:where(:-moz-window-inactive) {
-  border-color: hsl(305, 31%, 62%) !important;
+  border-color: rgba(211.65, 211.65, 211.65, 0.2) !important;
   background-color: rgba(0, 0, 0, 0.7) !important;
 }
 
