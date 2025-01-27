@@ -1,3 +1,3 @@
 [submodule "sass/themes/vscode"]
 	path = sass/themes/vscode
-	url = gitea@chlorine-18.local:binaryink/theme-vscode
+	url = https://github.com/BinaryInk/theme-vscode.git
