@@ -1,5 +1,6 @@
 /* userChrome/_sidebar */
 @use 'sass:map';
+@import '../themes/vscode/sass/vscode-theme.scss';
 
 #sidebar-box {
   --sidebar-background-color: rgba(0, 0, 0, 0.8);
@@ -10,6 +11,6 @@
 
 .sidebar-splitter {
   width: 1px !important;
-  background-color: $theme-vscode-dark-border-color !important;
+  background-color: rgba(33, 33, 33, 0.8);
   border: none !important;
 }

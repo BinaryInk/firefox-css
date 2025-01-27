@@ -1,5 +1,6 @@
 /* userChrome/toolbar */
 @use 'sass:map';
+@import '../themes/vscode/sass/vscode-theme.scss';
 
 :root {
     --toolbox-non-lwt-bgcolor: rgba(0, 0, 0, 0.8) !important;
@@ -15,11 +16,11 @@
     --toolbarbutton-outer-padding: 4px !important;
     --toolbarbutton-inner-padding: 4px !important;
     --toolbarbutton-icon-fill: #ffffff !important;
-    --toolbarbutton-hover-background: rgba(map.get($theme-vscode-dark-presets, 'accent1'), 0.2) !important;
+    --toolbarbutton-hover-background: rgba(154, 219, 254, 0.2) !important;
     --toolbarbutton-border-radius: 4px !important;
   
-    --toolbar-field-focus-color: map.get($theme-vscode-dark-presets, 'accent1') !important;
-    --toolbar-field-focus-border-color: map.get($theme-vscode-dark-presets, 'accent1') !important;
+    --toolbar-field-focus-color: hsl(201, 98%, 80%) !important;
+    --toolbar-field-focus-border-color: hsl(201, 98%, 80%) !important;
     --toolbar-field-color: #ffffff !important;
     
     --toolbar-bgcolor: rgba(0, 0, 0, 0.8) !important;

@@ -1,0 +1,15 @@
+@use 'sass:map';
+
+@import './themes/vscode/sass/vscode-theme.scss';
+// TODO Clean-up
+$theme-vscode-dark-background-inactive: rgba(0,0,0,0.7);
+$theme-vscode-dark-foreground-inactive: rgba(255,255,255,0.7);
+$theme-vscode-light-background-inactive: rgba(255,255,255,0.7);
+$theme-vscode-light-foreground-inactive: rgba(0,0,0,0.7);
+$theme-vscode-dark-background: rgba(0, 0, 0, 0.8);
+$theme-vscode-dark-foreground: rgb(255,255,255);
+$theme-vscode-light-background: rgba(255,255,255, 0.8);
+$theme-vscode-light-foreground: rgb(0,0,0);
+$theme-vscode-dark-border-color: rgba(map.get($theme-vscode-dark-presets, 'foreground'), 0.4);
+$theme-vscode-dark-border-color-inactive: rgba(map.get($theme-vscode-dark-presets, 'foreground'), 0.2);
+@import './userChrome/index'
