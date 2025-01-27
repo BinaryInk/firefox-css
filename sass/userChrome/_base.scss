@@ -1,5 +1,6 @@
 /* userChrome/_base.scss */
 @use 'sass:map';
+@import '../themes/vscode/sass/vscode-theme.scss';
 
 // Stuff that needs to be applied first. Some is erata I otherwise don't have a
 // place for.

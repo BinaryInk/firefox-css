@@ -4,7 +4,7 @@ using namespace System.Text
 param(
     [Parameter(Position = 0)]
     [string]
-    $Path = "$PSScriptRoot/sass/userChrome/_index.scss",
+    $Path = "$PSScriptRoot/sass/userChrome.scss",
 
     [Parameter(Position = 1)]
     [string]
@@ -27,7 +27,7 @@ $iex = [StringBuilder]::new()
 if ($Beta) {
     $Destination = [System.IO.Path]::ChangeExtension($Destination, 'beta.css')
 }
-$iex.Append("/usr/bin/sass $Path $Destination ") | Out-Null
+$iex.Append("/usr/bin/sass '$Path' '$Destination' ") | Out-Null
 $Watch ? $iex.Append('--watch ') : $null | Out-Null
 $IncludeMaps ? '--source-map ' : '--no-source-map ' | ForEach-Object { $iex.Append($_) | Out-Null }
 

@@ -90,7 +90,7 @@ toolbar:not(#nav-bar):where(:-moz-window-inactive) {
 
 .sidebar-splitter {
   width: 1px !important;
-  background-color: rgba(211.65, 211.65, 211.65, 0.4) !important;
+  background-color: rgba(33, 33, 33, 0.8) !important;
   border: none !important;
 }
 
@@ -100,7 +100,7 @@ toolbar:not(#nav-bar):where(:-moz-window-inactive) {
   --size-item-medium: 14px !important;
   --size-item-large: 18px !important;
   --button-border-radius: 10px !important;
-  --sidebar-background-color: rgba(map.get($theme-vscode-dark-presets, "background"), 1);
+  --sidebar-background-color: rgba(33, 33, 33, 0.9) !important;
 }
 
 body {
@@ -110,9 +110,8 @@ body {
 /* userChrome/_tabs */
 :root {
   --tab-selected-shadow: 0px !important;
-  --tab-selected-bgcolor: map.get($theme-vscode-dark-presets, "accent1") !important;
-  --tab-selected-bgcolor-inactive: map.get($theme-vscode-dark-presets, "accent2") !important;
-  --tab-selected-textcolor: rgb(255, 255, 255);
+  --tab-selected-bgcolor: rgb(154, 219, 254) !important;
+  --tab-selected-bgcolor-inactive: rgb(188, 128, 183) !important;
   --tab-min-height: 16px !important;
   --tab-group-label-height: 16px !important;
   --tab-inner-inline-margin: 4px !important;
@@ -125,16 +124,16 @@ body {
   --tab-label-line-height: 1.2 !important;
   --tab-hover-background-color: #dcdcaa50 !important;
   --tab-outline: 2px solid var(--tab-outline-color) !important;
-  --tab-loading-fill: map.get($theme-vscode-dark-presets, "accent1") !important;
+  --tab-loading-fill: rgb(154, 219, 254) !important;
   --tab-selected-textcolor: black !important;
   --tabstrip-inner-border: none !important;
   --tabstrip-min-height: 16px !important;
 }
 
-.tab-background:is([selected], [multiselected]) {
+.tabbrowser-tab:is([visuallyselected], [multiselected]) {
   background-color: var(--tab-selected-bgcolor) !important;
 }
-.tab-background:is([selected], [multiselected]), .tab-background:where(:-moz-window-inactive) {
+.tabbrowser-tab:is([visuallyselected], [multiselected]):where(:-moz-window-inactive) {
   background-color: var(--tab-selected-bgcolor-inactive) !important;
 }
 
@@ -150,10 +149,10 @@ body {
   --toolbarbutton-outer-padding: 4px !important;
   --toolbarbutton-inner-padding: 4px !important;
   --toolbarbutton-icon-fill: #ffffff !important;
-  --toolbarbutton-hover-background: rgba(map.get($theme-vscode-dark-presets, "accent1"), 0.2) !important;
+  --toolbarbutton-hover-background: rgba(154, 219, 254, 0.2) !important;
   --toolbarbutton-border-radius: 4px !important;
-  --toolbar-field-focus-color: map.get($theme-vscode-dark-presets, "accent1") !important;
-  --toolbar-field-focus-border-color: map.get($theme-vscode-dark-presets, "accent1") !important;
+  --toolbar-field-focus-color: rgb(154, 219, 254) !important;
+  --toolbar-field-focus-border-color: rgb(154, 219, 254) !important;
   --toolbar-field-color: #ffffff !important;
   --toolbar-bgcolor: rgba(0, 0, 0, 0.8) !important;
 }
@@ -319,8 +318,8 @@ toolbarbutton#reload-button {
 } */
 /* userChrome/titlebar */
 :root {
-  --titlebar-bgcolor: rgba(map.get($theme-vscode-dark-presets, "background"), 0.9) !important;
-  --titlebar-bgcolor-inactive: rgba(map.get($theme-vscode-dark-presets, "background"), 0.9) !important;
+  --titlebar-bgcolor: rgba(31, 31, 31, 0.9) !important;
+  --titlebar-bgcolor-inactive: rgba(31, 31, 31, 0.9) !important;
 }
 
 .titlebar-spacer[type=pre-tabs], .titlebar-spacer[type=post-tabs] {
@@ -376,7 +375,7 @@ urlbar-input::placeholder, .searchbar-textbox::placeholder {
 }
 
 #urlbar-container {
-  color: hsl(201, 98%, 80%);
+  color: rgb(154, 219, 254);
   --urlbar-container-height: 32px;
   --toolbar-field-unfocused-color: #6a9955 !important;
 }
